@@ -1,0 +1,24 @@
+body {
+    font-family: 'Gabriela', serif;
+    overflow-x: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-cols-1 {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  <!-- Tailwind Animations -->
+  @keyframes glow {
+    0% { filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.3)); }
+    50% { filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.6)); }
+    100% { filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.3)); }
+  }
+  .animate-glow {
+    animation: glow 3s infinite alternate;
+  }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - ACM techstorm</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-black text-gray-900">
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 bg-black flex items-center justify-between px-6 py-2 z-20">
+    <!-- Name/Logo -->
+    <div>
+      <a href="index.html"><img src="/assets/Images/techstorm.png" alt="Sinhgad Techtonic Logo" class="h-16 w-auto"></a>
+      <span class="h-9 bg-white w-[1px]"></span>
+    </div>
+
+    <!-- Menu Items -->
+    <ul class="hidden md:flex text-white items-center space-x-7 text-lg font-bold">
+      <li><a href="/about.html" class="hover:text-blue-700 focus:text-blue-500">About</a></li>
+      <li><a href="/events.html" class="hover:text-blue-700 focus:text-blue-500">Events</a></li>
+      <li><a href="/schedule.html" class="hover:text-blue-700 focus:text-blue-500">Schedule</a></li>
+      <li><a href="/contact.html" class="hover:text-blue-700 focus:text-blue-500">Contact</a></li>
+      <!-- Desktop Profile Button -->
+      <li>
+        <div class="relative inline-block">
+          <button id="profile-icon" 
+            class="flex items-center justify-center gap-2 px-4 py-2 w-52 border border-orange-700 text-orange-700 rounded hover:bg-orange-700 hover:text-white transition focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <img src="/assets/Images/register icon.png" alt="Profile" class="w-8 h-8 rounded-full">
+            <span class="flex-1 text-center">Register Now</span>
+          </button>
+
+          
+          <!-- Popup -->
+          <div id="popup"
+                class="absolute top-full mt-2 px-2 w-52 bg-black border border-gray-300 shadow-lg rounded hidden transition-transform transform scale-95">
+            <a href="/events.html#event-card" class="block w-full px-2 py-2 text-left mt-2 hover:text-blue-500 focus:text-blue-700">Canva Design</a>
+            <a href="/events.html#blind-coding" class="block w-full px-2 py-2 text-left hover:text-blue-500 focus:text-blue-700">Computer Assembly</a>
+            <a href="/events.html#hackacode" class="block w-full px-2 py-2 text-left hover:text-blue-500 focus:text-blue-700">E Sport - Valorant</a>
+          </div>
+        </div>        
+      </li>    
+    </ul>
+    
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden px-4 py-2 text-blue-500" aria-label="Toggle mobile menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 left-0 right-0 bg-gray-900 text-white shadow-lg p-6 md:hidden transform -translate-y-full transition-transform duration-300 ease-in-out z-50">
+    <span class="close-mobile-menu absolute top-5 right-6 text-3xl cursor-pointer text-blue-500 hover:text-gray-300" id="close-mobile-menu">&times;</span>
+    
+    <ul class="flex flex-col items-center space-y-6 text-lg font-semibold">
+      <li><a href="about.html" class="hover:text-blue-400 transition">About</a></li>
+      <li><a href="events.html" class="hover:text-blue-400 transition">Events</a></li>
+      <li><a href="schedule.html" class="hover:text-blue-400 transition">Schedule</a></li>
+      <li><a href="contact.html" class="hover:text-blue-400 transition">Contact</a></li>
+
+      <!-- Profile Button -->
+      <li>
+        <button id="profile-icon" 
+                    class="flex items-center px-2 py-2 w-44 border border-orange-700 text-orange-700 rounded hover:bg-orange-700 hover:text-white transition focus:outline-none focus:ring-2 focus:ring-orange-500">
+              <img src="/assets/Images/register icon.png" alt="Profile" class="w-8 h-8 rounded-full mr-2">
+              <span><a href="/events.html">Register Now</a></span>
+            </button>
+      </li>
+    </ul>
+  </div>   
+   
+   
+  <section class="py-20 pt-40 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-center">
+            <h2 class="text-4xl font-bold text-center mb-12 relative inline-block">
+                Get in <span class="text-blue-500">Touch</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[130%] h-[5px] bg-cyan-400 rounded-lg"></span>
+            </h2>
+        </div>
+        
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold">Contact Details</h3>
+                    <p class="text-gray-400 mt-2">Feel free to reach out to us anytime. We're here to help!</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-envelope text-blue-500 text-xl"></i>
+                        <a href="mailto:sitacm2425@gmail.com" class="text-gray-300 hover:text-blue-400 transition">sitacm2425@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-phone text-blue-500 text-xl"></i>
+                        <a href="tel:+917666768179" class="text-gray-300 hover:text-blue-400 transition">+91 7666768179</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-map-marker-alt text-blue-500 text-xl"></i>
+                        <p class="text-gray-300">Sinhgad Institute of Technology, <br>Lonavala,
+                            Dist. Pune, Pincode- 410401</p>
+                    </div>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-6 mt-6">
+                    <a href="https://chat.whatsapp.com/LZapixFDpqg88q5R2gQTFU" class="text-gray-400 hover:text-blue-500 transition text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/sit.acm/" class="text-gray-400 hover:text-blue-500 transition text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-500 transition text-2xl"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/in/sit-acm-student-chapter/" class="text-gray-400 hover:text-blue-500 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+    
+              <!-- Web3Forms Access Key -->
+              <input type="hidden" name="access_key" value="14180471-0c91-4e91-b64f-393ec5e06a5a">
+              
+              <input type="text" name="name" placeholder="Your Name" required 
+                     class="w-full p-3 bg-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 outline-none">
+              
+              <input type="email" name="email" placeholder="Your Email" required 
+                     class="w-full p-3 bg-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 outline-none">
+              
+              <!-- Subject Dropdown -->
+              <select name="subject" required 
+                      class="w-full p-3 bg-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 outline-none">
+                  <option value="" disabled selected>Select Subject</option>
+                  <option value="enquiry">Enquiry</option>
+                  <option value="sponsorship">Sponsorship</option>
+                  <option value="event-details">Event Details</option>
+                  <option value="other">Other</option>
+              </select>
+          
+              <textarea name="message" rows="4" placeholder="Your Message" required 
+                        class="w-full p-3 bg-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+              
+              <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 transition p-3 rounded-lg font-semibold">
+                  Send Message
+              </button>
+          </form>
+          
+        </div>
+    </div>
+</section>
+<br>    
+
+  <!-- Footer content -->
+  <footer class="bg-gray-900 text-gray-400 py-6">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 text-center md:text-left items-start">
+        
+        <!-- About Section -->
+        <div class="flex flex-col items-center md:items-start md:w-[400px] md:ml-8">
+          <h2 class="text-lg font-semibold text-gray-300">About TechStorm</h2>
+          <p class="mt-2 text-sm leading-relaxed">TechStorm is a premier tech event bringing innovation and creativity together. Join us for exciting events, competitions, and workshops.</p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="flex flex-col items-center md:items-start md:ml-40">
+          <h2 class="text-lg font-semibold text-gray-300">Quick Links</h2>
+          <ul class="mt-2 space-y-2">
+            <li><a href="/events.html" class="hover:text-blue-400 transition">Events</a></li>
+            <li><a href="/schedule.html" class="hover:text-blue-400 transition">Schedule</a></li>
+            <li><a href="/contact.html" class="hover:text-blue-400 transition">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- In Association With -->
+        <div class="flex flex-col items-center justify-center h-full">
+          <h2 class="text-lg font-semibold text-gray-300 mb-2">In Association With</h2>
+          <div class="flex space-x-3">
+            <img src="/assets/Images/acm.png" alt="ACM Logo" class="h-12 hover:scale-105 transition">
+          </div>
+        </div>
+  
+        <!-- Contact & Socials -->
+        <div class="flex flex-col items-center md:items-start">
+          <h2 class="text-lg font-semibold text-gray-300">Contact Us</h2>
+          <p class="mt-2 text-sm">Email: <a href="mailto:sitacm2425@gmail.com" class="text-blue-400 hover:text-blue-500 underline">sitacm2425@gmail.com</a></p>
+          <p class="mt-1 text-sm">Phone: +91 7666768179</p>
+  
+          <!-- Social Icons -->
+          <div class="flex space-x-4 mt-3">
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+            <a href="https://www.instagram.com/sit.acm/" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-youtube text-xl"></i></a>
+            <a href="https://www.linkedin.com/in/sit-acm-student-chapter/" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm md:flex md:justify-center md:items-center md:space-x-3">
+        <span>© 2025 TechStorm. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>

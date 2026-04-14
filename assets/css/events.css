@@ -1,0 +1,299 @@
+/* Background */
+.bg-gradient-to-b {
+    background: linear-gradient(180deg, #000000, #1A1A1A);
+}
+
+/* Event Card */
+.event-card {
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+/* Image */
+.event-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Event Details */
+.event-details {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Title */
+.event-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: cyan;
+}
+
+/* Date & Time */
+.event-date {
+    font-size: 1rem;
+    color: yellow;
+    font-weight: bold;
+    display: block;
+}
+
+.event-time {
+    font-size: 1rem;
+    color: lightblue;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.event-desc {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Button */
+.event-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background: yellow;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.event-btn:hover {
+    background: orange;
+    transform: scale(1.1);
+}
+
+/* Hover Effect */
+.event-card:hover {
+    transform: scale(1.05);
+    border-color: cyan;
+    box-shadow: 0px 0px 25px rgba(0, 255, 255, 0.5);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ✨ Modern Dark Themed Popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Popup Content with Dark Theme */
+.popup-content {
+    width: 100%;
+    max-width: 620px;
+    border-radius: 12px;
+    background: rgba(20, 20, 20, 0.95); /* Dark theme */
+    padding: 25px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); /* Darker shadow */
+}
+
+/* Show Animation */
+.popup-overlay.active .popup-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 22px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+/* Header */
+.popup-header {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.popup-title {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.event-meta {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* Pricing Section: Side-by-Side on Laptop */
+.pricing-options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 18px;
+}
+
+/* Side-by-Side for Large Screens */
+@media (min-width: 768px) {
+    .pricing-options {
+        flex-direction: row;
+    }
+}
+
+/* Pricing Card */
+.option {
+    flex: 1;
+    padding: 18px;
+    border-radius: 10px;
+    background: rgba(30, 30, 30, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Single Option */
+.single-option {
+    border-color: #3498db;
+}
+
+/* Combo Option */
+.combo-option {
+    border-color: #2ecc71;
+}
+
+.best-value {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #2ecc71;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Price and Button */
+.price-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* Register Button */
+.register-btn {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Button Styles */
+.primary {
+    background: #3498db;
+    color: white;
+    border: 2px solid #3498db;
+}
+
+.primary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #3498db;
+}
+
+.secondary {
+    background: #2ecc71;
+    color: white;
+    border: 2px solid #2ecc71;
+}
+
+.secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #2ecc71;
+}
+
+/* Mobile Enhancements */
+@media (max-width: 576px) {
+    .popup-content {
+        margin: 15px;
+        width: 95%;
+    }
+    
+    .pricing-options {
+        padding: 12px;
+    }
+
+    .price {
+        font-size: 1.4rem;
+    }
+    
+    .register-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
